@@ -24,6 +24,7 @@ bool checkForDuplicate(Event* event, string name){
     CharacterNode* travNode = event->head;  // set the node
     while(travNode != nullptr & flag){
         flag = travNode->details->name != name;  // check the condition
+        travNode = travNode->next;  // move to the next node
     }
     return flag;
 }
@@ -43,7 +44,7 @@ bool addCharacter(Event* event, CharacterNode* character){
             CharacterNode* node = event->head;
             if (checkForDuplicate(event, character->details->name)){
                 // set the new tail
-                event->tail = character;
+                event->tail->next = character;
                 event->tail = event->tail->next;
                 flag = true;  // set flag to true
             }

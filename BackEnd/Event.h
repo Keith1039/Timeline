@@ -10,6 +10,7 @@ struct Event {
     string eventName;  // name of the event
     string eventDetail {};  // details on the event
     Event* next = nullptr;  // point to the next event, defaulted as nullptr
+    Event* prev = nullptr;  // point to the previous event, defaulted as nullptr
     CharacterNode* head = nullptr;  // head of the character linked list
     CharacterNode* tail = nullptr;  // tail of the character linked list 
 };

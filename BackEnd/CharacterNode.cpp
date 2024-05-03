@@ -26,7 +26,3 @@ CharacterNode* createCharacterNode(CharacterDetails* character){
     return charaNode; 
 }
 
-int main(){
-    return 0;
-}
-
